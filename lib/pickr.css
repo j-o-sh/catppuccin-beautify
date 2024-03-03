@@ -1,0 +1,12 @@
+.flavour-pickr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--ctp-base, var(--ctp-cs-base, var(--ctp-mocha-base, #1e1e2e)));
+  color: var(--ctp-subtext0, var(--ctp-cs-subtext0, var(--ctp-mocha-subtext0, #a6adc8)));
+  transition: all 125ms;
+
+  &.hidden {
+    right: -100vw;
+  }
+}

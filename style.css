@@ -1,0 +1,48 @@
+@import '@catppuccin/palette/css/catppuccin.css';
+
+/* as an example of how I want to do the mechanis:  */
+
+:root {
+  --ctp-mantle: var(--ctp-frappe-mantle);
+  --ctp-text: var(--ctp-frappe-text);
+}
+
+@media ( prefers-color-scheme: light ) {
+  :root {
+    --ctp-mantle: var(--ctp-latte-mantle);
+    --ctp-text: var(--ctp-latte-text);
+  }
+}
+
+@media ( prefers-color-scheme: dark ) {
+  :root {
+    --ctp-mantle: var(--ctp-macchiato-mantle);
+    --ctp-text: var(--ctp-macchiato-text);
+  }
+}
+
+body[data-catppuccin-flavour=latte] {
+  --ctp-mantle: var(--ctp-latte-mantle);
+  --ctp-text: var(--ctp-latte-text);
+}
+
+body[data-catppuccin-flavour=frappe] {
+  --ctp-mantle: var(--ctp-frappe-mantle);
+  --ctp-text: var(--ctp-frappe-text);
+}
+
+body[data-catppuccin-flavour=macchiato] {
+  --ctp-mantle: var(--ctp-macchiato-mantle);
+  --ctp-text: var(--ctp-macchiato-text);
+}
+
+body[data-catppuccin-flavour=mocha] {
+  --ctp-mantle: var(--ctp-mocha-mantle);
+  --ctp-text: var(--ctp-mocha-text);
+}
+
+body {
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
