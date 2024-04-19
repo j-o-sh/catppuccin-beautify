@@ -5,6 +5,12 @@
 * magic theme chooser included as js include
 
 
+## Quickstart
+
+```sh
+npm i j-o-sh/catppuccin-beautify
+```
+
 ```html
 <html>
     <head>

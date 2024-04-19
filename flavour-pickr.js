@@ -3,13 +3,6 @@
 import './lib/pickr.css'
 
 setTimeout(()=> {
-  // const style = document.createElement('style')
-  // style.innerHTML = `
-  //   .flavour-pickr {
-  //     position: stic
-  //   }
-  // `
-
   const pickr = document.createElement('div')
   pickr.classList.add('flavour-pickr')
   pickr.innerHTML = `
@@ -26,13 +19,21 @@ setTimeout(()=> {
     document.body.dataset.catppuccinFlavour = value
   })
 
+  let initialHide
   document.addEventListener('keydown', e => {
     const { code, altKey, shiftKey, ctrlKey } = e
     if (code !== 'BracketRight' || !altKey || !shiftKey || !ctrlKey) return
 
     pickr.classList.toggle('hidden')
+    if (initialHide !== undefined) {
+      clearTimeout(initialHide)
+      initialHide = undefined
+    }
   })
   
-  // document.head.append(style)
   document.body.append(pickr)
+  initialHide = setTimeout(() => {
+    pickr.classList.toggle('hidden', true)
+    initialHide = undefined
+  }, 2500)
 })
