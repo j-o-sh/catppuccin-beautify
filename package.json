@@ -1,11 +1,10 @@
 {
   "name": "catppuccin-beautify",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "type": "module",
   "scripts": {
-    "postinstall": "node src/generate.js",
-    "prepare": "npm run generate"
+    "postinstall": "node src/generate.js"
   },
   "keywords": [],
   "author": "",
