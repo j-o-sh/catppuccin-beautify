@@ -1,0 +1,33 @@
+@import "./colors.css";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --font-copy: "Nunito", sans-serif;
+  --font-heading: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+  font-family: var(--font-copy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+
+/*
+ * Themes and Variations
+ */
+
+.sketch {
+  --font-heading: "Caveat", cursive;
+
+  :where(h1&,& h1)::before { content: '# '; }
+  :where(h2&,& h2)::before { content: '## '; }
+  :where(h3&,& h3)::before { content: '### '; }
+  :where(h4&,& h4)::before { content: '#### '; }
+  :where(h5&,& h5)::before { content: '##### '; }
+  :where(h6&,& h6)::before { content: '###### '; }
+}
