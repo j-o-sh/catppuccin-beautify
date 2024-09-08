@@ -16,6 +16,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+a {
+  color: var(--ctp-sapphire);
+
+  &:active {
+    color: var(--ctp-sky);
+  }
+
+  &:visited {
+    color: var(--ctp-blue);
+  }
+}
+
 
 /*
  * Themes and Variations
@@ -24,10 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 .sketch {
   --font-heading: "Caveat", cursive;
 
-  :where(h1&,& h1)::before { content: '# '; }
-  :where(h2&,& h2)::before { content: '## '; }
-  :where(h3&,& h3)::before { content: '### '; }
-  :where(h4&,& h4)::before { content: '#### '; }
-  :where(h5&,& h5)::before { content: '##### '; }
-  :where(h6&,& h6)::before { content: '###### '; }
+  :where(h1&,& h1)::before { color: var(--ctp-subtext0); content: '# '; }
+  :where(h2&,& h2)::before { color: var(--ctp-subtext0); content: '## '; }
+  :where(h3&,& h3)::before { color: var(--ctp-subtext0); content: '### '; }
+  :where(h4&,& h4)::before { color: var(--ctp-subtext0); content: '#### '; }
+  :where(h5&,& h5)::before { color: var(--ctp-subtext0); content: '##### '; }
+  :where(h6&,& h6)::before { color: var(--ctp-subtext0); content: '###### '; }
 }

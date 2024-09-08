@@ -1,8 +1,35 @@
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./beautify.css">
+    <title>Catppuccin Beautify</title>
   </head>
   <body class="sketch">
     <h1>Catppuccin Beautify</h1>
+    
+    <p>A beautify theme based on <a href="https://github.com/catppuccin">Catppuccin</a>.</p>
+
+    <p>The emphasis is on a streamlined and <i>clutterfree</i> DOM where a good looking theme emerges from the HTML semantics. <small>(So yes, it is basically an antithesis to <a href="https://tailwindcss.com">Tailwind</a>. Fight me! 😈)</small></p>
+
+    <h2>Colors</h2>
+
+    <p>The colors are the <a href="https://github.com/catppuccin">Catppuccin</a> colors. (What a supprise, I know 🎉).</p>
+
+    <p>They are grouped into themes that correspond to the Catppuccin themes and selected for your document in one of two ways:</p>
+
+    <ul>
+      <li>When no theme class is given, the css respects the users color scheme preferences via `@media (prefers-color-scheme)`. It will select <b>Latte</b> for a light theme preference and <b>Mocha</b> for the dark theme preference.</li>
+      <li>You can manually set the theme used, be specifying a `data-catppuccin-flavour` attribute with either `latte`, `frappe`, `macchiato` or `mocha`.</li>
+    </ul>
+
+    <h3>🌻 Latte</h3>
+
+    <div style="diplay: flex; gap: 1em; flex-wrap: wrap">
+      <div style="border-radius: 1em; width: 1em; aspect-ratio: 1; background: var(--ctp-latte-rosewater);"></div>
+    </div>
+
+    <h3>🪴 Frappé</h3>
+    <h3>🌺 Macchiato</h3>
+    <h3>🌿 Mocha</h3>
   </body>
 </html>
